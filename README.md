@@ -9,20 +9,22 @@ Essas instruções farão com que você tenha uma cópia do projeto em execuçã
 ### Pré-requisitos
 
 Para darmos início ao curso nossas máquinas devem ter algumas ferramentas já instaladas,são elas o:
-1[Composer](https://getcomposer.org/) , 
-1[Xampp](https://www.apachefriends.org/pt_br/index.html)( versão com o php7.2^) ou LAMPP:
+* [Composer](https://getcomposer.org/) , 
+* [Xampp](https://www.apachefriends.org/pt_br/index.html)( versão com o php7.2^) ou LAMPP:
 
 `` `
 sudo apt-get install lamp-server^
 `` `
-1[Visual Studio Code](https://code.visualstudio.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Instalando
 
 Para fazer download destes arquivos basta usar o comando:
+
 `` `
 git clone https://github.com/JVBicalho/minicursolaravel57.git
 `` `
+
 ou clicar naquele botão verde na parte superior direita.
 ## Roteiro
 
@@ -31,12 +33,13 @@ O roteiro do minicurso estará disponível ao fim da apresentação do mesmo na 
 
 ## Autor
 
-* ** JV Bicalho ** - * WebDev * 
+* JV Bicalho  
 
 
 ## Agradecimentos
 	Agradeço ao Luiz Antonio A. Alves, pela oportunidade.
-##Referências
+## Referências
+
 * [FrameWorks](https://dinamicatreinamentos.com/blog/o-que-sao-frameworks/ )
 * [Laravel Doc 5.7](https://laravel.com/docs/5.7)
 * [Boas Praticas](https://medium.com/@lucasmacedo/boas-pr%C3%A1ticas-em-apis-com-laravel-part-2-endpoints-e2a67e7cfe38)
