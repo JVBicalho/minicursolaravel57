@@ -12,5 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('login');
 });
+
+Auth::routes();
+Route::middleware('auth')->group(function(){
+   /* Route::get('/','')->name('index');
+    Route::post('/')->name('add');
+    Route::get('/{id}')
+    Route::put('/{id}')
+    Route::
+    Route::delete('/{id}')
+    */
+});
+Route::get('/home', 'ProdutoController@index')->name('home');
