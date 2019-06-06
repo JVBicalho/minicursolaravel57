@@ -19,6 +19,7 @@ class CreateEstoqueTable extends Migration
             $table->foreign('produto_id')->references('id')->on('produto');
             $table->integer('quantidade');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

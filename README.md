@@ -16,6 +16,8 @@ Para darmos início ao curso nossas máquinas devem ter algumas ferramentas já 
 sudo apt-get install lamp-server^
 `` `
 * [Visual Studio Code](https://code.visualstudio.com/)
+ 
+ Extensão VS Code recomendada [Laravel Extension Pack](https://marketplace.visualstudio.com/items?itemName=onecentlin.laravel-extension-pack).
 
 ### Instalando
 

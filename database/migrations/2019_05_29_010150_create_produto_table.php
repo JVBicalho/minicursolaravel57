@@ -19,6 +19,7 @@ class CreateProdutoTable extends Migration
             $table->string('descricao',50);
             $table->string('img',50)->default('default.png');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

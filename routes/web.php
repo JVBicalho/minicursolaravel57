@@ -16,13 +16,13 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::middleware('auth')->group(function(){
-   /* Route::get('/','')->name('index');
-    Route::post('/')->name('add');
-    Route::get('/{id}')
-    Route::put('/{id}')
-    Route::
-    Route::delete('/{id}')
-    */
+Route::group(array('middleware'=>'auth',['namespace'=>'produto'],'as'=>'produto.','prefix'=>'produto'),function(){
+    /*Route::get('/','')->name('index');*/
+    Route::get('/cadastrar',function(){return view('forms.formCadastrar');})->name('add');
+    Route::post('/cadastrar','ProdutoController@new')->name('add');
+    Route::get('/{id}','ProdutoController@detalhes')->name('detalhes');
+    Route::post('/{id}','ProdutoController@estoque')->name('estoque');
+    Route::any('/d/{id}','ProdutoController@delete')->name('delete');
+
 });
 Route::get('/home', 'ProdutoController@index')->name('home');
