@@ -12,11 +12,31 @@
 */
 
 Route::get('/', function () {
+    //Redireciona para a Rota de login
     return redirect()->route('login');
 });
+Auth::routes(['verify'=> true]);
+/*
+Declara as rotas de autenticação:
 
-Auth::routes();
-Route::group(array('middleware'=>'auth',['namespace'=>'produto'],'as'=>'produto.','prefix'=>'produto'),function(){
+// Authentication Routes...
+        $this->get('login', 'Auth\LoginController@showLoginForm')->name('login');
+        $this->post('login', 'Auth\LoginController@login');
+        $this->post('logout', 'Auth\LoginController@logout')->name('logout');
+
+// Rotas de Registro...
+
+    $this->get('register', 'Auth\RegisterController@showRegistrationForm')->name('register');
+    $this->post('register', 'Auth\RegisterController@register');
+
+//Rotas para trocar senha
+    $this->resetPassword();
+
+//Rotas de Verificação de Email
+     $this->emailVerification();
+*/
+
+Route::group(array('middleware'=>['auth','verified'],['namespace'=>'produto'],'as'=>'produto.','prefix'=>'produto'),function(){
     /*Route::get('/','')->name('index');*/
     Route::get('/cadastrar',function(){return view('forms.formCadastrar');})->name('add');
     Route::post('/cadastrar','ProdutoController@new')->name('add');
@@ -26,3 +46,5 @@ Route::group(array('middleware'=>'auth',['namespace'=>'produto'],'as'=>'produto.
 
 });
 Route::get('/home', 'ProdutoController@index')->name('home');
+
+
