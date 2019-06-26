@@ -1,7 +1,6 @@
 
 Adicionar a implementação da verificação de email no User Model(App\User)
-
-   "use Illuminate\Contracts\Auth\MustVerifyEmail"
+    "use Illuminate\Contracts\Auth\MustVerifyEmail"
 
 adcionar na declaração do User 
 
@@ -23,3 +22,13 @@ Adicione o middleware veryfied (verificado) as rotas que você deseja proteger
 Para gerar as views nescessarias rode o seguinte comando
 
     php artisan make:auth
+
+Temos que adicionar as configurações de conexão para o servidor de email, essas configurações ficam no arquivo ".env" e nos arquivos da pasta "config" .
+Estou usando o mailtrap.io para testar o envio de email.
+
+    MAIL_DRIVER=smtp
+    MAIL_HOST=smtp.mailtrap.io
+    MAIL_PORT=2525
+    MAIL_USERNAME=seuusername
+    MAIL_PASSWORD=suasenha
+    MAIL_ENCRYPTION=null
