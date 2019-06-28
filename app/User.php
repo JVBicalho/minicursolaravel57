@@ -8,9 +8,16 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 //Acrescenta a classe de verificação de email
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 
+//Declara que vamos usar o Uuid
+use App\Traits\Uuids;
+
+
 class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable;
+
+    use Uuids;// Obriga a classe a usar o Uuid
+    public $incrementing= false ; // Declara que não vamos usar o autoincremento
 
     /**
      * The attributes that are mass assignable.

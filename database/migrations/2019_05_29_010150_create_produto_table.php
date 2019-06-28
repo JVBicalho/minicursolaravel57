@@ -14,7 +14,10 @@ class CreateProdutoTable extends Migration
     public function up()
     {
         Schema::create('produto', function (Blueprint $table) {
-            $table->increments('id');
+            //$table->increments('id'); Removido para implementação de Uuids
+            $table->uuid('id');// Cria campo Uuid
+            $table->primary('id');// Faz do campo Uuid uma chave primaria
+
             $table->string('name',50);
             $table->string('descricao',50);
             $table->string('img',50)->default('default.png');

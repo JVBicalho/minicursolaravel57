@@ -20,6 +20,9 @@ class ProdutoController extends Controller
         return view('home',compact('produtos'));
 
     }
+    /**
+     * Adciona novo Projeto
+     */
     public function new(Request $request){
         $file= Input::file('img');
         //dd($file);
